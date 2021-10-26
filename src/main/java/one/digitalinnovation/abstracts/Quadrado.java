@@ -9,7 +9,7 @@ public class Quadrado extends FormaGeometrica {
         this.area=area;
     }
 
-    @Override  // Eu usei a sobrescrita porque estou extendendo uma classe abstrata entao se não fizer isso dá erro
+    @Override  // Eu usei a sobrescrita porque estou estendendo uma classe abstrata entao se não fizer isso dá erro
     public String name (){
         return name;
     }
@@ -19,7 +19,13 @@ public class Quadrado extends FormaGeometrica {
     }
     @Override
     public String toString(){ //
-        final StringBuilder builder = "Quadrado: [" + "name="" + name + """ area + area +];
+        final StringBuilder builder = new StringBuilder()//
+                .append("Quadrado [")//
+                .append("nome=\"")//
+                .append(name).append("\"")//
+                .append(",area=")//
+                .append(area)//
+                .append("]");
         return builder.toString();
     }
 }
